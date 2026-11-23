@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NetFlix</string>
+    <string name="series">Séries</string>
+    <string name="filmes">Filmes</string>
+    <string name="minha_lista">Minha Lista</string>
+    <string name="ficcao_cientifica">Ficção científica</string>
+    <string name="aventura">Aventura</string>
+    <string name="drama">Drama</string>
+    <string name="assistir">Assistir</string>
+    <string name="detalhes">Detalhes</string>
+    <string name="lancamento">Lançamento</string>
+    <string name="aluna">Maria Valentina</string>
+</resources>

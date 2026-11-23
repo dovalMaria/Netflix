@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageCapa"
+        android:layout_width="0dp"
+        android:layout_height="317dp"
+        android:alpha="0.55"
+        android:scaleType="centerCrop"
+        android:src="@drawable/capa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaHorizontalPrimeira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaHorizontalSegunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaHorizontalTerceira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="45dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@id/linhaGuiaHorizontalSegunda"
+        app:layout_constraintEnd_toStartOf="@id/txtSerie"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linhaGuiaHorizontalPrimeira" />
+
+    <TextView
+        android:id="@+id/txtSerie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/series"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewLogo"
+        app:layout_constraintEnd_toStartOf="@id/txtFilmes"
+        app:layout_constraintStart_toEndOf="@id/imageViewLogo"
+        app:layout_constraintTop_toTopOf="@id/imageViewLogo" />
+
+    <TextView
+        android:id="@+id/txtFilmes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filmes"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/txtSerie"
+        app:layout_constraintEnd_toStartOf="@id/txtMinhaLista"
+        app:layout_constraintStart_toEndOf="@id/txtSerie"
+        app:layout_constraintTop_toTopOf="@id/txtSerie" />
+
+    <TextView
+        android:id="@+id/txtMinhaLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minha_lista"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/txtSerie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtFilmes"
+        app:layout_constraintTop_toTopOf="@id/txtSerie" />
+
+    <ImageView
+        android:id="@+id/imageViewNomeFilme"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/nome_filme"
+        app:layout_constraintBottom_toBottomOf="@id/linhaGuiaHorizontalTerceira"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linhaGuiaHorizontalSegunda" />
+
+    <TextView
+        android:id="@+id/txtFiccao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/ficcao_cientifica"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/txtAventura"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toTopOf="@id/linhaGuiaHorizontalTerceira" />
+
+    <TextView
+        android:id="@+id/txtAventura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aventura"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/txtFiccao"
+        app:layout_constraintEnd_toStartOf="@id/txtDrama"
+        app:layout_constraintStart_toEndOf="@id/txtFiccao"
+        app:layout_constraintTop_toTopOf="@id/txtFiccao" />
+
+    <TextView
+        android:id="@+id/txtDrama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drama"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/txtAventura"
+        app:layout_constraintEnd_toEndOf="@id/linhaGuiaDireita"
+        app:layout_constraintStart_toEndOf="@id/txtAventura"
+        app:layout_constraintTop_toTopOf="@id/txtAventura" />
+
+    <Button
+        android:id="@+id/btMinhaLista"
+        android:layout_width="90dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/ic_adicionar"
+        android:padding="0dp"
+        android:singleLine="true"
+        android:text="@string/minha_lista"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@id/btAssistir"
+        app:layout_constraintEnd_toStartOf="@id/btAssistir"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toTopOf="@id/btAssistir" />
+
+    <Button
+        android:id="@+id/btAssistir"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:drawableLeft="@drawable/icexecutar"
+        android:padding="0dp"
+        android:singleLine="true"
+        android:text="@string/assistir"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/btDetalhes"
+        app:layout_constraintStart_toEndOf="@id/btMinhaLista"
+        app:layout_constraintTop_toBottomOf="@id/txtAventura" />
+
+    <Button
+        android:id="@+id/btDetalhes"
+        android:layout_width="90dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/ic_informacao"
+        android:padding="0dp"
+        android:singleLine="true"
+        android:text="@string/detalhes"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@id/btAssistir"
+        app:layout_constraintEnd_toEndOf="@id/linhaGuiaDireita"
+        app:layout_constraintStart_toEndOf="@id/btAssistir"
+        app:layout_constraintTop_toTopOf="@id/btAssistir" />
+
+    <TextView
+        android:id="@+id/textViewLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/lancamento"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintStart_toStartOf="@id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@id/btAssistir" />
+
+    <ImageView
+        android:id="@+id/imageViewDuna"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/filme_duna"
+        app:layout_constraintEnd_toStartOf="@id/imageViewChegada"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@id/textViewLancamento" />
+
+    <ImageView
+        android:id="@+id/imageViewChegada"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/filme_chegada"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewDuna"
+        app:layout_constraintEnd_toStartOf="@id/imageViewMarciano"
+        app:layout_constraintStart_toEndOf="@id/imageViewDuna"
+        app:layout_constraintTop_toTopOf="@id/imageViewDuna" />
+
+    <ImageView
+        android:id="@+id/imageViewMarciano"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/filme_marciano"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewChegada"
+        app:layout_constraintEnd_toEndOf="@id/linhaGuiaDireita"
+        app:layout_constraintStart_toEndOf="@id/imageViewChegada"
+        app:layout_constraintTop_toTopOf="@id/imageViewChegada" />
+
+    <TextView
+        android:id="@+id/textViewAluna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/aluna"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintStart_toStartOf="@id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@id/imageViewDuna" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
